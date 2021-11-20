@@ -9,3 +9,14 @@
 .normal{
     border: 10px;
 }
+
+#result{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}

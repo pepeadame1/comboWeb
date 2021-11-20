@@ -279,10 +279,12 @@ function checkCombo(s){
     if(currentComboLenght<=comboLenght){
         if(bufferString.endsWith(comboString) && currentComboLenght == comboLenght){
             console.log("COMBO MADE!!!");
+            $("#result").text("Correct!");
             currentComboLenght = 0;
         }
     }else{
         console.log("COMBO FAILED");
+        $('#result').text("Failed");
         currentComboLenght = 0;
     }
     document.getElementById("cLenghtActual").value = currentComboLenght;
