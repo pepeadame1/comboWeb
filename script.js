@@ -250,16 +250,89 @@ function animate(){
 
 var comboString;
 var bufferString = "";
+var currentComboLenght = 0;
+var comboLenght;
 function checkCombo(s){
     bufferString += s;
+    currentComboLenght++;
     console.log(bufferString);
-    if(bufferString.endsWith(comboString)){
-        console.log("COMBO MADE!!!");
+    if(currentComboLenght<=comboLenght){
+        if(bufferString.endsWith(comboString) && currentComboLenght == comboLenght){
+            console.log("COMBO MADE!!!");
+            currentComboLenght = 0;
+        }
+    }else{
+        console.log("COMBO FAILED");
+        currentComboLenght = 0;
     }
+    
 }
 
 function newCombo(){
     combo = document.getElementById("comboInput").value;
     console.log(combo);
+    comboLenght = countCombo(combo);
     comboString = combo;
+}
+
+function countCombo(data){
+    auxString = data;
+    counter = 0;
+    exitBool = false
+    while(auxString != "" && exitBool==false){
+        if(auxString.startsWith("DP")){
+            counter++;
+            auxString = auxString.slice(4);
+        }else if(auxString.startsWith("DPB")){
+            counter++;
+            auxString = auxString.slice(5);
+        }else if(auxString.startsWith("QCF")){
+            counter++;
+            auxString = auxString.slice(5);
+        }else if(auxString.startsWith("QCB")){
+            counter++;
+            auxString = auxString.slice(5);
+        }else if(auxString.startsWith("HCF")){
+            counter++;
+            auxString = auxString.slice(5);
+        }else if(auxString.startsWith("HCB")){
+            counter++;
+            auxString = auxString.slice(5);
+        }else if(auxString.startsWith("DQCF")){
+            counter++;
+            auxString = auxString.slice(6);
+        }else if(auxString.startsWith("DQCB")){
+            counter++;
+            auxString = auxString.slice(6);
+        }else if(auxString.startsWith("LP")){
+            counter++;
+            auxString = auxString.slice(2);
+        }else if(auxString.startsWith("MP")){
+            counter++;
+            auxString = auxString.slice(2);
+        }else if(auxString.startsWith("HP")){
+            counter++;
+            auxString = auxString.slice(2);
+        }else if(auxString.startsWith("LK")){
+            counter++;
+            auxString = auxString.slice(2);
+        }else if(auxString.startsWith("MK")){
+            counter++;
+            auxString = auxString.slice(2);
+        }else if(auxString.startsWith("HK")){
+            counter++;
+            auxString = auxString.slice(2);
+        }else{
+            console.log("wrong input");
+            exitBool = true;
+        }
+        //console.log(auxString);
+    }
+    
+    if(exitBool){
+        return 0;
+        
+    }else{
+        return counter;
+    }
 }

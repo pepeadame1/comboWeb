@@ -2,8 +2,7 @@
 
 class BlitzPad{
 	constructor(){
-		//var gamepad;
-		//var chromepad;
+
 		this.chromeIndex = -1;
 
 		this.lastBtnValues = {};
