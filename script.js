@@ -285,7 +285,8 @@ function checkCombo(s){
         console.log("COMBO FAILED");
         currentComboLenght = 0;
     }
-    
+    document.getElementById("cLenghtActual").value = currentComboLenght;
+    $("#cLenghtActual").text(currentComboLenght);
 }
 
 function newCombo(){
@@ -293,6 +294,7 @@ function newCombo(){
     console.log(combo);
     comboLenght = countCombo(combo);
     comboString = combo;
+    $('#cLenght').text(comboLenght);
 }
 
 function countCombo(data){

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="./index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="blitzpad.js"></script>
     <script src="./script.js"></script>
@@ -14,6 +15,18 @@
     <label for="comboInput">Combo Input</label>
     <input type="text" id="comboInput" name="comboInput"><br>
     <button type="button" onclick="newCombo()">test combo</button>
+
+    <div id="comboLenght">
+        <div class="normal">
+            <p># de ataques actual</p>
+            <p id="cLenghtActual">0</p>
+        </div>
+        <div class="normal">
+            <p># de ataques del combo</p>
+            <p id="cLenght">0</p>
+        </div>
+        
+    </div>
 
 </body>
 </html>
