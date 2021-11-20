@@ -13,102 +13,122 @@ var attackData;
 function dragonPunchForward(data){
     console.log('dragon punch');
     attackData = "DP"+data;
+    //Right, Down, DownRight
     checkCombo(attackData);
 }
 
 function dragonPunchBack(data){
     console.log('dragon punch back');
     attackData = "DPB"+data;
+    //Left, Down, DownLeft
     checkCombo(attackData);
 }
 
 function quarterCircleForward(data){
     console.log('quarter circle forward');
     attackData = "QCF"+data;
+    //Down, DownRight, Right
     checkCombo(attackData);
 }
 
 function quarterCircleBack(data){
     console.log('quarter circle back');
     attackData = "QCB"+data;
+    //Down, DownLeft, Left
     checkCombo(attackData);
 }
 
 function halfCircleForward(data){
     console.log('half circle forward');
     attackData = "HCF"+data;
+    //Left, DownLeft, Down, DownRight, Right
     checkCombo(attackData);
 }
 
 function halfCircleBack(data){
     console.log('half circle back');
     attackData = "HCB"+data;
+    //Right, DownRight, Down, DownLeft, Left
     checkCombo(attackData);
 }
 
 function doubleQuarterCircleForward(data){
     console.log("double quarter circle forward");
     attackData = "DQCF"+data;
+    //Down, DownRight, Right, Down, DownRight, Right
     checkCombo(attackData);
 }
 
 function doubleQuarterCircleBack(data){
     console.log("double quarter circle back");
     attackData = "DQCB"+data;
+    //Down, DownLeft, Left, Down, DownLeft, Left
     checkCombo(attackData);
 }
 
 function lightPunch(data){
-    console.log("ligth punch");
+    console.log("light punch");
+    //LowPunch
     checkCombo("LP");
 }
 
 function mediumPunch(data){
     console.log("medium punch");
+    //MedPunch
     checkCombo("MP");
 }
 
 function heavyPunch(data){
     console.log("heavy punch");
+    //HighPunch
     checkCombo("HP");
 }
 
 function lightKick(data){
-    console.log("ligth kick");
+    console.log("light kick");
+    //LowKick
     checkCombo("LK");
 }
 
 function mediumKick(data){
     console.log("medium kick");
+    //MedKick
     checkCombo("MK");
 }
 
 function heavyKick(data){
     console.log("heavy kick");
+    //HighKick
     checkCombo("HK");
 }
 
 function downLightPunch(data){
+    //Down, LowPunch
     checkCombo("2LP");
 }
 
 function downMediumPunch(data){
+    //Down, MedPunch
     checkCombo("2MP");
 }
 
 function downHeavyPunch(data){
+    //Down, HighPunch
     checkCombo("2HP");
 }
 
 function downLightKick(data){
+    //Down, LowKick
     checkCombo("2LK");
 }
 
 function downMediumKick(data){
+    //Down, MedKick
     checkCombo("2MK")
 }
 
 function downHeavyKick(data){
+    //Down, HighKick
     checkCombo("2HK");
 }
 
