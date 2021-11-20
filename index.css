@@ -6,6 +6,14 @@
     justify-content: space-around;
 }
 
+#comboDisplay{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: space-around;
+}
+
 .normal{
     border: 10px;
 }
