@@ -10,10 +10,28 @@ var bp = new BlitzPad();
 
 var attackData;
 
+var imgArray = [];
+var imgCount = 0;
+
+
 function dragonPunchForward(data){
     console.log('dragon punch');
     attackData = "DP"+data;
     //Right, Down, DownRight
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Right.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/DownRight.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo(attackData);
 }
 
@@ -131,6 +149,14 @@ function downHeavyKick(data){
     //Down, HighKick
     checkCombo("2HK");
 }
+
+function displayCombo() {
+    for(var i = 0; i < imgCount; i++){
+        document.getElementById('comboDisplay').appendChild(imgArray[i]);
+    }
+}
+
+
 
 //dragon punch forward
 bp.addOnListItem("623LP","LP",dragonPunchForward);//dragon punch forward light punch
@@ -280,6 +306,9 @@ function checkCombo(s){
         if(bufferString.endsWith(comboString) && currentComboLenght == comboLenght){
             console.log("COMBO MADE!!!");
             currentComboLenght = 0;
+
+            imgArray = [];
+            imgCount = 0;
         }
     }else{
         console.log("COMBO FAILED");
