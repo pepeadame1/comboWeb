@@ -59,7 +59,7 @@ function dragonPunchForward(data){
 
     addPunch(data);
 
-    checkArray(4);
+    //checkArray(4);
 
     displayCombo();
 
@@ -82,6 +82,8 @@ function dragonPunchBack(data){
     imgArray[imgCount].src = 'Icons/DownLeft.jpg';
     imgCount++;
 
+    addPunch(data);
+
     displayCombo();
 
     checkCombo(attackData);
@@ -103,6 +105,7 @@ function quarterCircleForward(data){
     imgArray[imgCount].src = 'Icons/Right.jpg';
     imgCount++;
 
+    addPunch(data);
     displayCombo();
 
     checkCombo(attackData);
@@ -123,6 +126,8 @@ function quarterCircleBack(data){
     imgArray[imgCount] = new Image();
     imgArray[imgCount].src = 'Icons/Left.jpg';
     imgCount++;
+
+    addPunch(data);
 
     displayCombo();
 
@@ -153,6 +158,8 @@ function halfCircleForward(data){
     imgArray[imgCount].src = 'Icons/Right.jpg';
     imgCount++;
 
+    addPunch(data);
+
     displayCombo();
 
     checkCombo(attackData);
@@ -181,6 +188,8 @@ function halfCircleBack(data){
     imgArray[imgCount] = new Image();
     imgArray[imgCount].src = 'Icons/Left.jpg';
     imgCount++;
+
+    addPunch(data);
 
     displayCombo();
     checkCombo(attackData);
@@ -213,6 +222,8 @@ function doubleQuarterCircleForward(data){
     imgArray[imgCount] = new Image();
     imgArray[imgCount].src = 'Icons/Right.jpg';
     imgCount++;
+
+    addPunch(data);
 
     displayCombo();
 
@@ -247,6 +258,8 @@ function doubleQuarterCircleBack(data){
     imgArray[imgCount].src = 'Icons/Left.jpg';
     imgCount++;
 
+
+    addPunch(data);
     displayCombo();
 
     checkCombo(attackData);
@@ -254,10 +267,9 @@ function doubleQuarterCircleBack(data){
 
 function lightPunch(data){
     console.log("light punch");
-    //LowPunch
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/LowPunch.jpg';
-    imgCount++;
+
+
+    addPunch(data);
 
     displayCombo();
 
@@ -266,10 +278,8 @@ function lightPunch(data){
 
 function mediumPunch(data){
     console.log("medium punch");
-    //MedPunch
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/MedPunch.jpg';
-    imgCount++;
+
+    addPunch(data);
 
     displayCombo();
 
@@ -278,10 +288,8 @@ function mediumPunch(data){
 
 function heavyPunch(data){
     console.log("heavy punch");
-    //HighPunch
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/HighPunch.jpg';
-    imgCount++;
+
+    addPunch(data);
 
     displayCombo();
 
@@ -290,10 +298,9 @@ function heavyPunch(data){
 
 function lightKick(data){
     console.log("light kick");
-    //LowKick
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/LowKick.jpg';
-    imgCount++;
+
+
+    addPunch(data);
 
     displayCombo();
 
@@ -302,10 +309,8 @@ function lightKick(data){
 
 function mediumKick(data){
     console.log("medium kick");
-    //MedKick
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/MedKick.jpg';
-    imgCount++;
+
+    addPunch(data);
 
     displayCombo();
 
@@ -314,10 +319,8 @@ function mediumKick(data){
 
 function heavyKick(data){
     console.log("heavy kick");
-    //HighKick
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/HighKick.jpg';
-    imgCount++;
+
+    addPunch(data);
 
     displayCombo();
 
@@ -330,9 +333,7 @@ function downLightPunch(data){
     imgArray[imgCount].src = 'Icons/Down.jpg';
     imgCount++;
 
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/LowPunch.jpg';
-    imgCount++;
+    addPunch(data);
 
     displayCombo();
 
@@ -345,9 +346,7 @@ function downMediumPunch(data){
     imgArray[imgCount].src = 'Icons/Down.jpg';
     imgCount++;
 
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/MedPunch.jpg';
-    imgCount++;
+    addPunch(data);
 
     displayCombo();
 
@@ -360,9 +359,7 @@ function downHeavyPunch(data){
     imgArray[imgCount].src = 'Icons/Down.jpg';
     imgCount++;
 
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/HighPunch.jpg';
-    imgCount++;
+    addPunch(data);
 
     displayCombo();
 
@@ -375,9 +372,7 @@ function downLightKick(data){
     imgArray[imgCount].src = 'Icons/Down.jpg';
     imgCount++;
 
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/LowKick.jpg';
-    imgCount++;
+    addPunch(data);
 
     displayCombo();
 
@@ -390,9 +385,7 @@ function downMediumKick(data){
     imgArray[imgCount].src = 'Icons/Down.jpg';
     imgCount++;
 
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/MedKick.jpg';
-    imgCount++;
+    addPunch(data);
 
     displayCombo();
 
@@ -405,9 +398,7 @@ function downHeavyKick(data){
     imgArray[imgCount].src = 'Icons/Down.jpg';
     imgCount++;
 
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/HighKick.jpg';
-    imgCount++;
+    addPunch(data);
 
     displayCombo();
 
@@ -598,12 +589,12 @@ function countCombo(data){
     counter = 0;
     exitBool = false
     while(auxString != "" && exitBool==false){
-        if(auxString.startsWith("DP")){
-            counter++;
-            auxString = auxString.slice(4);
-        }else if(auxString.startsWith("DPB")){
+        if(auxString.startsWith("DPB")){
             counter++;
             auxString = auxString.slice(5);
+        }else if(auxString.startsWith("DP")){
+            counter++;
+            auxString = auxString.slice(4);
         }else if(auxString.startsWith("QCF")){
             counter++;
             auxString = auxString.slice(5);
