@@ -50,11 +50,11 @@ function dragonPunchForward(data){
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/DownRight.jpg';
+    imgArray[imgCount].src = 'Icons/Down.jpg';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgArray[imgCount].src = 'Icons/DownRight.jpg';
     imgCount++;
 
     addPunch(data);
@@ -70,6 +70,20 @@ function dragonPunchBack(data){
     console.log('dragon punch back');
     attackData = "DPB"+data;
     //Left, Down, DownLeft
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Left.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/DownLeft.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo(attackData);
 }
 
@@ -77,6 +91,20 @@ function quarterCircleForward(data){
     console.log('quarter circle forward');
     attackData = "QCF"+data;
     //Down, DownRight, Right
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/DownRight.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Right.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo(attackData);
 }
 
@@ -84,6 +112,20 @@ function quarterCircleBack(data){
     console.log('quarter circle back');
     attackData = "QCB"+data;
     //Down, DownLeft, Left
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/DownLeft.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Left.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo(attackData);
 }
 
@@ -91,6 +133,28 @@ function halfCircleForward(data){
     console.log('half circle forward');
     attackData = "HCF"+data;
     //Left, DownLeft, Down, DownRight, Right
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Left.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/DownLeft.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/DownRight.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Right.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo(attackData);
 }
 
@@ -98,6 +162,27 @@ function halfCircleBack(data){
     console.log('half circle back');
     attackData = "HCB"+data;
     //Right, DownRight, Down, DownLeft, Left
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Right.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/DownRight.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/DownLeft.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Left.jpg';
+    imgCount++;
+
+    displayCombo();
     checkCombo(attackData);
 }
 
@@ -105,6 +190,32 @@ function doubleQuarterCircleForward(data){
     console.log("double quarter circle forward");
     attackData = "DQCF"+data;
     //Down, DownRight, Right, Down, DownRight, Right
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/DownRight.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Right.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/DownRight.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Right.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo(attackData);
 }
 
@@ -112,72 +223,194 @@ function doubleQuarterCircleBack(data){
     console.log("double quarter circle back");
     attackData = "DQCB"+data;
     //Down, DownLeft, Left, Down, DownLeft, Left
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/DownLeft.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Left.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/DownLeft.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Left.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo(attackData);
 }
 
 function lightPunch(data){
     console.log("light punch");
     //LowPunch
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/LowPunch.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo("LP");
 }
 
 function mediumPunch(data){
     console.log("medium punch");
     //MedPunch
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/MedPunch.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo("MP");
 }
 
 function heavyPunch(data){
     console.log("heavy punch");
     //HighPunch
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/HighPunch.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo("HP");
 }
 
 function lightKick(data){
     console.log("light kick");
     //LowKick
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/LowKick.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo("LK");
 }
 
 function mediumKick(data){
     console.log("medium kick");
     //MedKick
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/MedKick.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo("MK");
 }
 
 function heavyKick(data){
     console.log("heavy kick");
     //HighKick
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/HighKick.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo("HK");
 }
 
 function downLightPunch(data){
     //Down, LowPunch
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/LowPunch.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo("2LP");
 }
 
 function downMediumPunch(data){
     //Down, MedPunch
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/MedPunch.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo("2MP");
 }
 
 function downHeavyPunch(data){
     //Down, HighPunch
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/HighPunch.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo("2HP");
 }
 
 function downLightKick(data){
     //Down, LowKick
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/LowKick.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo("2LK");
 }
 
 function downMediumKick(data){
     //Down, MedKick
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/MedKick.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo("2MK")
 }
 
 function downHeavyKick(data){
     //Down, HighKick
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgCount++;
+
+    imgArray[imgCount] = new Image();
+    imgArray[imgCount].src = 'Icons/HighKick.jpg';
+    imgCount++;
+
+    displayCombo();
+
     checkCombo("2HK");
 }
 
