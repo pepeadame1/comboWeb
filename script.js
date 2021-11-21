@@ -12,6 +12,33 @@ var attackData;
 
 var imgArray = [];
 var imgCount = 0;
+var maxArray = 11;
+
+function checkArray(num){
+    if((imgCount+num)>maxArray){
+        imgArray = imgArray.slice(num);
+        imgCount -= num;
+    }
+}
+
+function addPunch(data){
+    imgArray[imgCount] = new Image();
+
+    if(data == "LP"){
+        imgArray[imgCount].src = 'Icons/LowPunch.jpg';
+    }else if(data == "MP"){
+        imgArray[imgCount].src = 'Icons/MedPunch.jpg';
+    }else if(data == "HP"){
+        imgArray[imgCount].src = 'Icons/HighPunch.jpg';
+    }else if(data == "LK"){
+        imgArray[imgCount].src = 'Icons/LowKick.jpg';
+    }else if (data == "MK"){
+        imgArray[imgCount].src = 'Icons/MedKick.jpg';
+    }else if (data == "HK"){
+        imgArray[imgCount].src = 'Icons/HighKick.jpg';
+    }
+    imgCount++;
+}
 
 
 function dragonPunchForward(data){
@@ -29,6 +56,10 @@ function dragonPunchForward(data){
     imgArray[imgCount] = new Image();
     imgArray[imgCount].src = 'Icons/Down.jpg';
     imgCount++;
+
+    addPunch(data);
+
+    checkArray(4);
 
     displayCombo();
 
@@ -154,6 +185,7 @@ function displayCombo() {
     for(var i = 0; i < imgCount; i++){
         document.getElementById('comboDisplay').appendChild(imgArray[i]);
     }
+    //document.getElementById('comboDisplay').appendChild(imgArray);
 }
 
 
