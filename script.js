@@ -11,7 +11,9 @@ var bp = new BlitzPad();
 var attackData;
 
 var imgArray = [];
+var imgArray2 = [];
 var imgCount = 0;
+var imgCount2 = 0;
 var maxArray = 11;
 
 function checkArray(num){
@@ -412,6 +414,12 @@ function displayCombo() {
     //document.getElementById('comboDisplay').appendChild(imgArray);
 }
 
+function displayCombo2() {
+    for(var i = 0; i < imgCount2; i++){
+        document.getElementById('comboDisplay2').appendChild(imgArray2[i]);
+    }
+    //document.getElementById('comboDisplay').appendChild(imgArray);
+}
 
 
 //dragon punch forward
@@ -613,48 +621,192 @@ function countCombo(data){
             counter++;
             auxString = auxString.slice(3);
             punchString = auxString.substring(0,2);
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Left.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/DownLeft.jpg';
+            imgCount2++;
+
             punch2(punchString);
             auxString = auxString.slice(2);
         }else if(auxString.startsWith("DP")){
             counter++;
             auxString = auxString.slice(2);
             punchString = auxString.substring(0,2);
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Right.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/DownRight.jpg';
+            imgCount2++;
+
             punch2(punchString);
             auxString = auxString.slice(2);
         }else if(auxString.startsWith("QCF")){
             counter++;
             auxString = auxString.slice(3)
             punchString = auxString.substring(0,2);
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/DownRight.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Right.jpg';
+            imgCount2++;
+
             punch2(punchString);
             auxString = auxString.slice(2);;
         }else if(auxString.startsWith("QCB")){
             counter++;
             auxString = auxString.slice(3);
             punchString = auxString.substring(0,2);
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/DownLeft.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Left.jpg';
+            imgCount2++;
+
             punch2(punchString);
             auxString = auxString.slice(2);
         }else if(auxString.startsWith("HCF")){
             counter++;
             auxString = auxString.slice(3);
             punchString = auxString.substring(0,2);
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Left.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/DownLeft.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/DownRight.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Right.jpg';
+            imgCount2++;
+
             punch2(punchString);
             auxString = auxString.slice(2);
         }else if(auxString.startsWith("HCB")){
             counter++;
             auxString = auxString.slice(3);
             punchString = auxString.substring(0,2);
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Right.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/DownRight.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/DownLeft.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Left.jpg';
+            imgCount2++;
+
             punch2(punchString);
             auxString = auxString.slice(2);
         }else if(auxString.startsWith("DQCF")){
             counter++;
             auxString = auxString.slice(4);
             punchString = auxString.substring(0,2);
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/DownRight.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Right.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/DownRight.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Right.jpg';
+            imgCount2++;
+
             punch2(punchString);
             auxString = auxString.slice(2);
         }else if(auxString.startsWith("DQCB")){
             counter++;
             auxString = auxString.slice(4);
             punchString = auxString.substring(0,2);
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/DownLeft.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Left.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/DownLeft.jpg';
+            imgCount2++;
+
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Left.jpg';
+            imgCount2++;
+
             punch2(punchString);
             auxString = auxString.slice(2);
         }else if(auxString.startsWith("LP")){
@@ -687,7 +839,11 @@ function countCombo(data){
         }
         //console.log(auxString);
     }
-    
+
+    displayCombo2();
+    imgArray = [];
+    imgCount = 0;
+
     if(exitBool){
         return 0;
         
