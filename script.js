@@ -584,53 +584,103 @@ function newCombo(){
     $('#cLenght').text(comboLenght);
 }
 
+function punch2(data){
+    imgArray2[imgCount2] = new Image();
+
+    if(data == "LP"){
+        imgArray2[imgCount2].src = 'Icons/LowPunch.jpg';
+    }else if(data == "MP"){
+        imgArray2[imgCount2].src = 'Icons/MedPunch.jpg';
+    }else if(data == "HP"){
+        imgArray2[imgCount2].src = 'Icons/HighPunch.jpg';
+    }else if(data == "LK"){
+        imgArray2[imgCount2].src = 'Icons/LowKick.jpg';
+    }else if (data == "MK"){
+        imgArray2[imgCount2].src = 'Icons/MedKick.jpg';
+    }else if (data == "HK"){
+        imgArray2[imgCount2].src = 'Icons/HighKick.jpg';
+    }
+    imgCount2++;
+}
+
 function countCombo(data){
     auxString = data;
+    var punchString;
     counter = 0;
     exitBool = false
     while(auxString != "" && exitBool==false){
         if(auxString.startsWith("DPB")){
             counter++;
-            auxString = auxString.slice(5);
+            auxString = auxString.slice(3);
+            punchString = auxString.substring(0,2);
+            punch2(punchString);
+            auxString = auxString.slice(2);
         }else if(auxString.startsWith("DP")){
             counter++;
-            auxString = auxString.slice(4);
+            auxString = auxString.slice(2);
+            punchString = auxString.substring(0,2);
+            punch2(punchString);
+            auxString = auxString.slice(2);
         }else if(auxString.startsWith("QCF")){
             counter++;
-            auxString = auxString.slice(5);
+            auxString = auxString.slice(3)
+            punchString = auxString.substring(0,2);
+            punch2(punchString);
+            auxString = auxString.slice(2);;
         }else if(auxString.startsWith("QCB")){
             counter++;
-            auxString = auxString.slice(5);
+            auxString = auxString.slice(3);
+            punchString = auxString.substring(0,2);
+            punch2(punchString);
+            auxString = auxString.slice(2);
         }else if(auxString.startsWith("HCF")){
             counter++;
-            auxString = auxString.slice(5);
+            auxString = auxString.slice(3);
+            punchString = auxString.substring(0,2);
+            punch2(punchString);
+            auxString = auxString.slice(2);
         }else if(auxString.startsWith("HCB")){
             counter++;
-            auxString = auxString.slice(5);
+            auxString = auxString.slice(3);
+            punchString = auxString.substring(0,2);
+            punch2(punchString);
+            auxString = auxString.slice(2);
         }else if(auxString.startsWith("DQCF")){
             counter++;
-            auxString = auxString.slice(6);
+            auxString = auxString.slice(4);
+            punchString = auxString.substring(0,2);
+            punch2(punchString);
+            auxString = auxString.slice(2);
         }else if(auxString.startsWith("DQCB")){
             counter++;
-            auxString = auxString.slice(6);
+            auxString = auxString.slice(4);
+            punchString = auxString.substring(0,2);
+            punch2(punchString);
+            auxString = auxString.slice(2);
         }else if(auxString.startsWith("LP")){
             counter++;
             auxString = auxString.slice(2);
+            punch2("LP");
         }else if(auxString.startsWith("MP")){
             counter++;
             auxString = auxString.slice(2);
+            punch2("MP");
         }else if(auxString.startsWith("HP")){
             counter++;
             auxString = auxString.slice(2);
+            punch2("HP");
         }else if(auxString.startsWith("LK")){
             counter++;
             auxString = auxString.slice(2);
+            punch2("LK");
         }else if(auxString.startsWith("MK")){
             counter++;
             auxString = auxString.slice(2);
+            punch2("MK");
         }else if(auxString.startsWith("HK")){
             counter++;
             auxString = auxString.slice(2);
+            punch2("HK");
         }else{
             console.log("wrong input");
             exitBool = true;
