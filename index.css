@@ -19,7 +19,8 @@
     border-color: darkred;
     margin: 20px;
     padding: 20px;
-    width:fit-content
+    width:fit-content;
+    background-color: #707372;
 }
 
 .normal{
@@ -50,3 +51,6 @@ img{
     src: url(PressStart2P-Regular.ttf);
 }
 
+body{
+    background-color: #b2b4b2;
+}

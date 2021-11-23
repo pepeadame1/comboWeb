@@ -27,17 +27,17 @@ function addPunch(data){
     imgArray[imgCount] = new Image();
 
     if(data == "LP"){
-        imgArray[imgCount].src = 'Icons/LowPunch.jpg';
+        imgArray[imgCount].src = 'Icons/LowPunch.png';
     }else if(data == "MP"){
-        imgArray[imgCount].src = 'Icons/MedPunch.jpg';
+        imgArray[imgCount].src = 'Icons/MedPunch.png';
     }else if(data == "HP"){
-        imgArray[imgCount].src = 'Icons/HighPunch.jpg';
+        imgArray[imgCount].src = 'Icons/HighPunch.png';
     }else if(data == "LK"){
-        imgArray[imgCount].src = 'Icons/LowKick.jpg';
+        imgArray[imgCount].src = 'Icons/LowKick.png';
     }else if (data == "MK"){
-        imgArray[imgCount].src = 'Icons/MedKick.jpg';
+        imgArray[imgCount].src = 'Icons/MedKick.png';
     }else if (data == "HK"){
-        imgArray[imgCount].src = 'Icons/HighKick.jpg';
+        imgArray[imgCount].src = 'Icons/HighKick.png';
     }
     imgCount++;
 }
@@ -48,15 +48,15 @@ function dragonPunchForward(data){
     attackData = "DP"+data;
     //Right, Down, DownRight
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Right.jpg';
+    imgArray[imgCount].src = 'Icons/Right.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgArray[imgCount].src = 'Icons/Down.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/DownRight.jpg';
+    imgArray[imgCount].src = 'Icons/DownRight.png';
     imgCount++;
 
     addPunch(data);
@@ -73,15 +73,15 @@ function dragonPunchBack(data){
     attackData = "DPB"+data;
     //Left, Down, DownLeft
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Left.jpg';
+    imgArray[imgCount].src = 'Icons/Left.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgArray[imgCount].src = 'Icons/Down.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/DownLeft.jpg';
+    imgArray[imgCount].src = 'Icons/DownLeft.png';
     imgCount++;
 
     addPunch(data);
@@ -96,15 +96,15 @@ function quarterCircleForward(data){
     attackData = "QCF"+data;
     //Down, DownRight, Right
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgArray[imgCount].src = 'Icons/Down.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/DownRight.jpg';
+    imgArray[imgCount].src = 'Icons/DownRight.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Right.jpg';
+    imgArray[imgCount].src = 'Icons/Right.png';
     imgCount++;
 
     addPunch(data);
@@ -118,15 +118,15 @@ function quarterCircleBack(data){
     attackData = "QCB"+data;
     //Down, DownLeft, Left
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgArray[imgCount].src = 'Icons/Down.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/DownLeft.jpg';
+    imgArray[imgCount].src = 'Icons/DownLeft.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Left.jpg';
+    imgArray[imgCount].src = 'Icons/Left.png';
     imgCount++;
 
     addPunch(data);
@@ -141,23 +141,23 @@ function halfCircleForward(data){
     attackData = "HCF"+data;
     //Left, DownLeft, Down, DownRight, Right
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Left.jpg';
+    imgArray[imgCount].src = 'Icons/Left.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/DownLeft.jpg';
+    imgArray[imgCount].src = 'Icons/DownLeft.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgArray[imgCount].src = 'Icons/Down.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/DownRight.jpg';
+    imgArray[imgCount].src = 'Icons/DownRight.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Right.jpg';
+    imgArray[imgCount].src = 'Icons/Right.png';
     imgCount++;
 
     addPunch(data);
@@ -172,23 +172,23 @@ function halfCircleBack(data){
     attackData = "HCB"+data;
     //Right, DownRight, Down, DownLeft, Left
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Right.jpg';
+    imgArray[imgCount].src = 'Icons/Right.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/DownRight.jpg';
+    imgArray[imgCount].src = 'Icons/DownRight.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgArray[imgCount].src = 'Icons/Down.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/DownLeft.jpg';
+    imgArray[imgCount].src = 'Icons/DownLeft.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Left.jpg';
+    imgArray[imgCount].src = 'Icons/Left.png';
     imgCount++;
 
     addPunch(data);
@@ -202,27 +202,27 @@ function doubleQuarterCircleForward(data){
     attackData = "DQCF"+data;
     //Down, DownRight, Right, Down, DownRight, Right
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgArray[imgCount].src = 'Icons/Down.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/DownRight.jpg';
+    imgArray[imgCount].src = 'Icons/DownRight.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Right.jpg';
+    imgArray[imgCount].src = 'Icons/Right.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgArray[imgCount].src = 'Icons/Down.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/DownRight.jpg';
+    imgArray[imgCount].src = 'Icons/DownRight.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Right.jpg';
+    imgArray[imgCount].src = 'Icons/Right.png';
     imgCount++;
 
     addPunch(data);
@@ -237,27 +237,27 @@ function doubleQuarterCircleBack(data){
     attackData = "DQCB"+data;
     //Down, DownLeft, Left, Down, DownLeft, Left
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgArray[imgCount].src = 'Icons/Down.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/DownLeft.jpg';
+    imgArray[imgCount].src = 'Icons/DownLeft.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Left.jpg';
+    imgArray[imgCount].src = 'Icons/Left.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgArray[imgCount].src = 'Icons/Down.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/DownLeft.jpg';
+    imgArray[imgCount].src = 'Icons/DownLeft.png';
     imgCount++;
 
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Left.jpg';
+    imgArray[imgCount].src = 'Icons/Left.png';
     imgCount++;
 
 
@@ -272,7 +272,7 @@ function lightPunch(data){
 
     if(isDown){
         imgArray[imgCount] = new Image();
-        imgArray[imgCount].src = 'Icons/Down.jpg';
+        imgArray[imgCount].src = 'Icons/Down.png';
         imgCount++;
         checkCombo("2LP");
     }else{
@@ -290,7 +290,7 @@ function mediumPunch(data){
     console.log("medium punch");
     if(isDown){
         imgArray[imgCount] = new Image();
-        imgArray[imgCount].src = 'Icons/Down.jpg';
+        imgArray[imgCount].src = 'Icons/Down.png';
         imgCount++;
         checkCombo("2MP");
     }else{
@@ -306,7 +306,7 @@ function heavyPunch(data){
 
     if(isDown){
         imgArray[imgCount] = new Image();
-        imgArray[imgCount].src = 'Icons/Down.jpg';
+        imgArray[imgCount].src = 'Icons/Down.png';
         imgCount++;
         checkCombo("2HP");
     }else{
@@ -324,7 +324,7 @@ function lightKick(data){
 
     if(isDown){
         imgArray[imgCount] = new Image();
-        imgArray[imgCount].src = 'Icons/Down.jpg';
+        imgArray[imgCount].src = 'Icons/Down.png';
         imgCount++;
         checkCombo("2LK");
     }else{
@@ -341,7 +341,7 @@ function mediumKick(data){
 
     if(isDown){
         imgArray[imgCount] = new Image();
-        imgArray[imgCount].src = 'Icons/Down.jpg';
+        imgArray[imgCount].src = 'Icons/Down.png';
         imgCount++;
         checkCombo("2MK");
     }else{
@@ -359,7 +359,7 @@ function heavyKick(data){
 
     if(isDown){
         imgArray[imgCount] = new Image();
-        imgArray[imgCount].src = 'Icons/Down.jpg';
+        imgArray[imgCount].src = 'Icons/Down.png';
         imgCount++;
         checkCombo("2HK");
     }else{
@@ -373,7 +373,7 @@ function heavyKick(data){
 function downLightPunch(data){//////DELETE
     //Down, LowPunch
     imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
+    imgArray[imgCount].src = 'Icons/Down.png';
     imgCount++;
 
     addPunch(data);
@@ -576,17 +576,17 @@ function punch2(data){
     imgArray2[imgCount2] = new Image();
 
     if(data == "LP"){
-        imgArray2[imgCount2].src = 'Icons/LowPunch.jpg';
+        imgArray2[imgCount2].src = 'Icons/LowPunch.png';
     }else if(data == "MP"){
-        imgArray2[imgCount2].src = 'Icons/MedPunch.jpg';
+        imgArray2[imgCount2].src = 'Icons/MedPunch.png';
     }else if(data == "HP"){
-        imgArray2[imgCount2].src = 'Icons/HighPunch.jpg';
+        imgArray2[imgCount2].src = 'Icons/HighPunch.png';
     }else if(data == "LK"){
-        imgArray2[imgCount2].src = 'Icons/LowKick.jpg';
+        imgArray2[imgCount2].src = 'Icons/LowKick.png';
     }else if (data == "MK"){
-        imgArray2[imgCount2].src = 'Icons/MedKick.jpg';
+        imgArray2[imgCount2].src = 'Icons/MedKick.png';
     }else if (data == "HK"){
-        imgArray2[imgCount2].src = 'Icons/HighKick.jpg';
+        imgArray2[imgCount2].src = 'Icons/HighKick.png';
     }
     imgCount2++;
 }
@@ -605,15 +605,15 @@ function countCombo(data){
             punchString = auxString.substring(0,2);
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Left.jpg';
+            imgArray2[imgCount2].src = 'Icons/Left.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgArray2[imgCount2].src = 'Icons/Down.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/DownLeft.jpg';
+            imgArray2[imgCount2].src = 'Icons/DownLeft.png';
             imgCount2++;
 
             punch2(punchString);
@@ -624,15 +624,15 @@ function countCombo(data){
             punchString = auxString.substring(0,2);
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Right.jpg';
+            imgArray2[imgCount2].src = 'Icons/Right.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgArray2[imgCount2].src = 'Icons/Down.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/DownRight.jpg';
+            imgArray2[imgCount2].src = 'Icons/DownRight.png';
             imgCount2++;
 
             punch2(punchString);
@@ -643,15 +643,15 @@ function countCombo(data){
             punchString = auxString.substring(0,2);
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgArray2[imgCount2].src = 'Icons/Down.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/DownRight.jpg';
+            imgArray2[imgCount2].src = 'Icons/DownRight.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Right.jpg';
+            imgArray2[imgCount2].src = 'Icons/Right.png';
             imgCount2++;
 
             punch2(punchString);
@@ -662,15 +662,15 @@ function countCombo(data){
             punchString = auxString.substring(0,2);
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgArray2[imgCount2].src = 'Icons/Down.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/DownLeft.jpg';
+            imgArray2[imgCount2].src = 'Icons/DownLeft.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Left.jpg';
+            imgArray2[imgCount2].src = 'Icons/Left.png';
             imgCount2++;
 
             punch2(punchString);
@@ -681,23 +681,23 @@ function countCombo(data){
             punchString = auxString.substring(0,2);
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Left.jpg';
+            imgArray2[imgCount2].src = 'Icons/Left.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/DownLeft.jpg';
+            imgArray2[imgCount2].src = 'Icons/DownLeft.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgArray2[imgCount2].src = 'Icons/Down.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/DownRight.jpg';
+            imgArray2[imgCount2].src = 'Icons/DownRight.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Right.jpg';
+            imgArray2[imgCount2].src = 'Icons/Right.png';
             imgCount2++;
 
             punch2(punchString);
@@ -708,23 +708,23 @@ function countCombo(data){
             punchString = auxString.substring(0,2);
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Right.jpg';
+            imgArray2[imgCount2].src = 'Icons/Right.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/DownRight.jpg';
+            imgArray2[imgCount2].src = 'Icons/DownRight.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgArray2[imgCount2].src = 'Icons/Down.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/DownLeft.jpg';
+            imgArray2[imgCount2].src = 'Icons/DownLeft.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Left.jpg';
+            imgArray2[imgCount2].src = 'Icons/Left.png';
             imgCount2++;
 
             punch2(punchString);
@@ -735,27 +735,27 @@ function countCombo(data){
             punchString = auxString.substring(0,2);
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgArray2[imgCount2].src = 'Icons/Down.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/DownRight.jpg';
+            imgArray2[imgCount2].src = 'Icons/DownRight.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Right.jpg';
+            imgArray2[imgCount2].src = 'Icons/Right.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgArray2[imgCount2].src = 'Icons/Down.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/DownRight.jpg';
+            imgArray2[imgCount2].src = 'Icons/DownRight.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Right.jpg';
+            imgArray2[imgCount2].src = 'Icons/Right.png';
             imgCount2++;
 
             punch2(punchString);
@@ -766,27 +766,27 @@ function countCombo(data){
             punchString = auxString.substring(0,2);
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgArray2[imgCount2].src = 'Icons/Down.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/DownLeft.jpg';
+            imgArray2[imgCount2].src = 'Icons/DownLeft.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Left.jpg';
+            imgArray2[imgCount2].src = 'Icons/Left.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgArray2[imgCount2].src = 'Icons/Down.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/DownLeft.jpg';
+            imgArray2[imgCount2].src = 'Icons/DownLeft.png';
             imgCount2++;
 
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Left.jpg';
+            imgArray2[imgCount2].src = 'Icons/Left.png';
             imgCount2++;
 
             punch2(punchString);
@@ -817,7 +817,7 @@ function countCombo(data){
             punch2("HK");
         }else if(auxString.startsWith("2")){
             imgArray2[imgCount2] = new Image();
-            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgArray2[imgCount2].src = 'Icons/Down.png';
             imgCount2++;
             counter++;
             auxString = auxString.slice(1);
