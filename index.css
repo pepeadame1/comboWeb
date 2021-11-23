@@ -55,3 +55,28 @@ img{
 body{
     background-color: #b2b4b2;
 }
+
+label{
+    font-family: PressStart2P;
+}
+
+button{
+    font-family: PressStart2P;
+    font-size: large;
+}
+
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: PressStart2P;
+}
+
+.help{
+    width: 80px;
+    height: 80px;
+}
