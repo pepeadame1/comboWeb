@@ -545,6 +545,8 @@ function checkCombo(s){
     if(currentComboLenght<=comboLenght){
         if(bufferString.endsWith(comboString) && currentComboLenght == comboLenght){
             console.log("COMBO MADE!!!");
+            var audio = new Audio('activate.wav');
+            audio.play();
             $("#result").text("Correct!");
             $('#comboDisplay').html("");
             currentComboLenght = 0;
@@ -553,22 +555,30 @@ function checkCombo(s){
             imgCount = 0;
         }
     }else{
-        console.log("COMBO FAILED");
-        $('#result').text("Failed");
+        if(hasComboTarget){
+            console.log("COMBO FAILED");
+            $('#result').text("Failed");
+            var audio = new Audio('warning.wav');
+            audio.play();
+            currentComboLenght = 0;
+        }
         
-        currentComboLenght = 0;
     }
-    document.getElementById("cLenghtActual").value = currentComboLenght;
+    //document.getElementById("cLenghtActual").value = currentComboLenght;
     $("#cLenghtActual").text(currentComboLenght);
 }
+
+var hasComboTarget = false;
 
 function newCombo(){
     combo = document.getElementById("comboInput").value;
     console.log(combo);
     $('#comboDisplay2').html('');
+    currentComboLenght = 0;
+    $("#cLenghtActual").text(currentComboLenght);
     comboLenght = countCombo(combo);
     comboString = combo;
-    
+    hasComboTarget = true;
     $('#cLenght').text(comboLenght);
 }
 
