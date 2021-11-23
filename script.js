@@ -270,66 +270,107 @@ function doubleQuarterCircleBack(data){
 function lightPunch(data){
     console.log("light punch");
 
+    if(isDown){
+        imgArray[imgCount] = new Image();
+        imgArray[imgCount].src = 'Icons/Down.jpg';
+        imgCount++;
+        checkCombo("2LP");
+    }else{
+        checkCombo("LP");
+    }
 
     addPunch(data);
 
     displayCombo();
 
-    checkCombo("LP");
+
 }
 
 function mediumPunch(data){
     console.log("medium punch");
-
+    if(isDown){
+        imgArray[imgCount] = new Image();
+        imgArray[imgCount].src = 'Icons/Down.jpg';
+        imgCount++;
+        checkCombo("2MP");
+    }else{
+        checkCombo("MP");
+    }
     addPunch(data);
 
     displayCombo();
-
-    checkCombo("MP");
 }
 
 function heavyPunch(data){
     console.log("heavy punch");
 
+    if(isDown){
+        imgArray[imgCount] = new Image();
+        imgArray[imgCount].src = 'Icons/Down.jpg';
+        imgCount++;
+        checkCombo("2HP");
+    }else{
+        checkCombo("HP");
+    }
+
     addPunch(data);
 
     displayCombo();
 
-    checkCombo("HP");
 }
 
 function lightKick(data){
     console.log("light kick");
 
+    if(isDown){
+        imgArray[imgCount] = new Image();
+        imgArray[imgCount].src = 'Icons/Down.jpg';
+        imgCount++;
+        checkCombo("2LK");
+    }else{
+        checkCombo("LK");
+    }
 
     addPunch(data);
 
     displayCombo();
-
-    checkCombo("LK");
 }
 
 function mediumKick(data){
     console.log("medium kick");
 
+    if(isDown){
+        imgArray[imgCount] = new Image();
+        imgArray[imgCount].src = 'Icons/Down.jpg';
+        imgCount++;
+        checkCombo("2MK");
+    }else{
+        checkCombo("MK");
+    }
+
     addPunch(data);
 
     displayCombo();
 
-    checkCombo("MK");
 }
 
 function heavyKick(data){
     console.log("heavy kick");
 
+    if(isDown){
+        imgArray[imgCount] = new Image();
+        imgArray[imgCount].src = 'Icons/Down.jpg';
+        imgCount++;
+        checkCombo("2HK");
+    }else{
+        checkCombo("HK");
+    }
+
     addPunch(data);
-
     displayCombo();
-
-    checkCombo("HK");
 }
 
-function downLightPunch(data){
+function downLightPunch(data){//////DELETE
     //Down, LowPunch
     imgArray[imgCount] = new Image();
     imgArray[imgCount].src = 'Icons/Down.jpg';
@@ -342,70 +383,7 @@ function downLightPunch(data){
     checkCombo("2LP");
 }
 
-function downMediumPunch(data){
-    //Down, MedPunch
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
-    imgCount++;
 
-    addPunch(data);
-
-    displayCombo();
-
-    checkCombo("2MP");
-}
-
-function downHeavyPunch(data){
-    //Down, HighPunch
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
-    imgCount++;
-
-    addPunch(data);
-
-    displayCombo();
-
-    checkCombo("2HP");
-}
-
-function downLightKick(data){
-    //Down, LowKick
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
-    imgCount++;
-
-    addPunch(data);
-
-    displayCombo();
-
-    checkCombo("2LK");
-}
-
-function downMediumKick(data){
-    //Down, MedKick
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
-    imgCount++;
-
-    addPunch(data);
-
-    displayCombo();
-
-    checkCombo("2MK")
-}
-
-function downHeavyKick(data){
-    //Down, HighKick
-    imgArray[imgCount] = new Image();
-    imgArray[imgCount].src = 'Icons/Down.jpg';
-    imgCount++;
-
-    addPunch(data);
-
-    displayCombo();
-
-    checkCombo("2HK");
-}
 
 function displayCombo() {
     for(var i = 0; i < imgCount; i++){
@@ -485,13 +463,7 @@ bp.addOnListItem("HP","HP",heavyPunch);//heavy Punch
 bp.addOnListItem("LK","LK",lightKick);//Light Kick
 bp.addOnListItem("MK","MK",mediumKick);//Medium Kick
 bp.addOnListItem("HK","HK",heavyKick);//Heavy Kick
-//down attacks
-bp.addOnListItem("2LP","LP",downLightPunch)//down light punch
-bp.addOnListItem("2MP","MP",downMediumPunch)//down medium punch
-bp.addOnListItem("2HP","HP",downHeavyPunch)//down heavy punch
-bp.addOnListItem("2LP","LK",downLightKick)//down light kick
-bp.addOnListItem("2MP","MK",downMediumKick)//down medium kick
-bp.addOnListItem("2HP","HK",downHeavyKick)//down heavy kick
+
 
 $(document).ready(function(){
     bp.setEventListeners();
@@ -507,6 +479,7 @@ function startAnimating(fps){
 }
 
 var frames = 0;
+var isDown = false;
 
 function animate(){
     requestAnimationFrame(animate);
@@ -529,6 +502,9 @@ function animate(){
             if (bp.buttonDown(13)) {
                 //move down
                 //console.log("down");
+                isDown = true;
+            }else{
+                isDown = false;
             }
             
             if (bp.buttonDown(14)) {
@@ -570,6 +546,7 @@ function checkCombo(s){
         if(bufferString.endsWith(comboString) && currentComboLenght == comboLenght){
             console.log("COMBO MADE!!!");
             $("#result").text("Correct!");
+            $('#comboDisplay').html("");
             currentComboLenght = 0;
 
             imgArray = [];
@@ -578,6 +555,7 @@ function checkCombo(s){
     }else{
         console.log("COMBO FAILED");
         $('#result').text("Failed");
+        
         currentComboLenght = 0;
     }
     document.getElementById("cLenghtActual").value = currentComboLenght;
@@ -587,8 +565,10 @@ function checkCombo(s){
 function newCombo(){
     combo = document.getElementById("comboInput").value;
     console.log(combo);
+    $('#comboDisplay2').html('');
     comboLenght = countCombo(combo);
     comboString = combo;
+    
     $('#cLenght').text(comboLenght);
 }
 
@@ -615,6 +595,8 @@ function countCombo(data){
     auxString = data;
     var punchString;
     counter = 0;
+    imgArray2 = [];
+    imgCount2 = 0;
     exitBool = false
     while(auxString != "" && exitBool==false){
         if(auxString.startsWith("DPB")){
@@ -673,7 +655,7 @@ function countCombo(data){
             imgCount2++;
 
             punch2(punchString);
-            auxString = auxString.slice(2);;
+            auxString = auxString.slice(2);
         }else if(auxString.startsWith("QCB")){
             counter++;
             auxString = auxString.slice(3);
@@ -833,11 +815,20 @@ function countCombo(data){
             counter++;
             auxString = auxString.slice(2);
             punch2("HK");
+        }else if(auxString.startsWith("2")){
+            imgArray2[imgCount2] = new Image();
+            imgArray2[imgCount2].src = 'Icons/Down.jpg';
+            imgCount2++;
+            counter++;
+            auxString = auxString.slice(1);
+            punchString = auxString.substring(0,2);
+            punch2(punchString);
+            auxString = auxString.slice(2);
         }else{
             console.log("wrong input");
             exitBool = true;
         }
-        //console.log(auxString);
+        console.log(auxString);
     }
 
     displayCombo2();
