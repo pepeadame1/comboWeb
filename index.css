@@ -17,6 +17,9 @@
 #Diccionario{
     border-style: inset;
     border-color: darkred;
+    margin: 20px;
+    padding: 20px;
+    width:fit-content
 }
 
 .normal{
@@ -33,10 +36,17 @@
 
 
 p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: PressStart2P;
+    font-size: large;
 }
 
 img{
     width: 150px;
     height: 150px;
 }
+
+@font-face {
+    font-family: PressStart2P;
+    src: url(PressStart2P-Regular.ttf);
+}
+
