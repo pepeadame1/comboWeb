@@ -13,7 +13,6 @@ var img1 = new imageManager();
 var img2 = new imageManager();
 
 function dragonPunchForward(data){
-    console.log('dragon punch');
     attackData = "DPF"+data;
     img1.dpf(data);
     displayCombo('comboDisplay',img1);
@@ -21,7 +20,6 @@ function dragonPunchForward(data){
 }
 
 function dragonPunchBack(data){
-    console.log('dragon punch back');
     attackData = "DPB"+data;
     img1.dpb(data);
     displayCombo('comboDisplay',img1);
@@ -29,7 +27,6 @@ function dragonPunchBack(data){
 }
 
 function quarterCircleForward(data){
-    console.log('quarter circle forward');
     attackData = "QCF"+data;
     img1.qcf(data);
     displayCombo('comboDisplay',img1);
@@ -37,7 +34,6 @@ function quarterCircleForward(data){
 }
 
 function quarterCircleBack(data){
-    console.log('quarter circle back');
     attackData = "QCB"+data;
     img1.qcb(data);
     displayCombo('comboDisplay',img1);
@@ -45,7 +41,6 @@ function quarterCircleBack(data){
 }
 
 function halfCircleForward(data){
-    console.log('half circle forward');
     attackData = "HCF"+data;
     img1.hcf(data);
     displayCombo('comboDisplay',img1);
@@ -53,7 +48,6 @@ function halfCircleForward(data){
 }
 
 function halfCircleBack(data){
-    console.log('half circle back');
     attackData = "HCB"+data;
     img1.hcb(data);
     displayCombo('comboDisplay',img1);
@@ -61,7 +55,6 @@ function halfCircleBack(data){
 }
 
 function doubleQuarterCircleForward(data){
-    console.log("double quarter circle forward");
     attackData = "DQCF"+data;
     img1.dqcf(data);
     displayCombo('comboDisplay',img1);
@@ -70,7 +63,6 @@ function doubleQuarterCircleForward(data){
 }
 
 function doubleQuarterCircleBack(data){
-    console.log("double quarter circle back");
     attackData = "DQCB"+data;
     img1.dqcb(data);
     displayCombo('comboDisplay',img1);
@@ -78,7 +70,6 @@ function doubleQuarterCircleBack(data){
 }
 
 function lightPunch(data){
-    console.log("light punch");
     if(isDown){
         checkCombo("2LP");
     }else{
@@ -91,7 +82,6 @@ function lightPunch(data){
 }
 
 function mediumPunch(data){
-    console.log("medium punch");
     if(isDown){
         
         checkCombo("2MP");
@@ -103,7 +93,6 @@ function mediumPunch(data){
 }
 
 function heavyPunch(data){
-    console.log("heavy punch");
     if(isDown){
         checkCombo("2HP");
     }else{
@@ -115,7 +104,6 @@ function heavyPunch(data){
 }
 
 function lightKick(data){
-    console.log("light kick");
     if(isDown){
         checkCombo("2LK");
     }else{
@@ -126,7 +114,6 @@ function lightKick(data){
 }
 
 function mediumKick(data){
-    console.log("medium kick");
     if(isDown){
         checkCombo("2MK");
     }else{
@@ -138,7 +125,6 @@ function mediumKick(data){
 }
 
 function heavyKick(data){
-    console.log("heavy kick");
     if(isDown){
         checkCombo("2HK");
     }else{
@@ -287,10 +273,8 @@ var comboLenght;
 function checkCombo(s){
     bufferString += s;
     currentComboLenght++;
-    console.log(bufferString);
     if(currentComboLenght<=comboLenght){
         if(bufferString.endsWith(comboString) && currentComboLenght == comboLenght){
-            console.log("COMBO MADE!!!");
             var audio = new Audio('activate.wav');
             audio.play();
             $("#result").text("Correct!");
@@ -301,7 +285,6 @@ function checkCombo(s){
         }
     }else{
         if(hasComboTarget){
-            console.log("COMBO FAILED");
             $('#result').text("Failed");
             var audio = new Audio('warning.wav');
             audio.play();
@@ -325,8 +308,8 @@ var hasComboTarget = false;
 
 function newCombo(){
     combo = document.getElementById("comboInput").value;
-    console.log(combo);
     $('#comboDisplay2').html('');
+    $("#result").text("");
     currentComboLenght = 0;
     $("#cLenghtActual").text(currentComboLenght);
     comboLenght = countCombo(combo);
@@ -336,114 +319,10 @@ function newCombo(){
 }
 
 function countCombo(data){
-    auxString = data;
-    var punchString;
-    counter = 0;
-    img2.cleanCombo();
-    exitBool = false;
-    while(auxString != "" && exitBool==false){
-        if(auxString.startsWith("DPB")){
-            counter++;
-            auxString = auxString.slice(3);
-            punchString = auxString.substring(0,2);
-            
-            img2.dpb(punchString);
-
-            auxString = auxString.slice(2);
-        }else if(auxString.startsWith("DPF")){
-            counter++;
-            auxString = auxString.slice(3);
-            punchString = auxString.substring(0,2);
-
-            img2.dpf(punchString);
-
-            auxString = auxString.slice(2);
-        }else if(auxString.startsWith("QCF")){
-            counter++;
-            auxString = auxString.slice(3)
-            punchString = auxString.substring(0,2);
-
-            img2.qcf(punchString);
-            auxString = auxString.slice(2);
-        }else if(auxString.startsWith("QCB")){
-            counter++;
-            auxString = auxString.slice(3);
-            punchString = auxString.substring(0,2);
-
-            img2.qcb(punchString);
-            auxString = auxString.slice(2);
-        }else if(auxString.startsWith("HCF")){
-            counter++;
-            auxString = auxString.slice(3);
-            punchString = auxString.substring(0,2);
-
-            img2.hcf(punchString);
-            auxString = auxString.slice(2);
-        }else if(auxString.startsWith("HCB")){
-            counter++;
-            auxString = auxString.slice(3);
-            punchString = auxString.substring(0,2);
-
-            img2.hcb(punchString);
-            auxString = auxString.slice(2);
-        }else if(auxString.startsWith("DQCF")){
-            counter++;
-            auxString = auxString.slice(4);
-            punchString = auxString.substring(0,2);
-
-            img2.dqcf(punchString);
-            auxString = auxString.slice(2);
-        }else if(auxString.startsWith("DQCB")){
-            counter++;
-            auxString = auxString.slice(4);
-            punchString = auxString.substring(0,2);
-
-            img2.dqcb(punchString);
-            auxString = auxString.slice(2);
-        }else if(auxString.startsWith("LP")){
-            counter++;
-            auxString = auxString.slice(2);
-            img2.addPunch("LP");
-        }else if(auxString.startsWith("MP")){
-            counter++;
-            auxString = auxString.slice(2);
-            img2.addPunch("MP");
-        }else if(auxString.startsWith("HP")){
-            counter++;
-            auxString = auxString.slice(2);
-            img2.addPunch("HP");
-        }else if(auxString.startsWith("LK")){
-            counter++;
-            auxString = auxString.slice(2);
-            img2.addPunch("LK");
-        }else if(auxString.startsWith("MK")){
-            counter++;
-            auxString = auxString.slice(2);
-            img2.addPunch("MK");
-        }else if(auxString.startsWith("HK")){
-            counter++;
-            auxString = auxString.slice(2);
-            img2.addPunch("HK");
-        }else if(auxString.startsWith("2")){
-            counter++;
-            auxString = auxString.slice(1);
-            punchString = auxString.substring(0,2);
-            img2.down(punchString);
-            auxString = auxString.slice(2);
-        }else{
-            console.log("wrong input");
-            exitBool = true;
-        }
-        console.log(auxString);
-    }
-
-    displayCombo("comboDisplay2",img2);
+    var parser = new comboParser(img2);
+    var count = parser.count(data);
+    var im = parser.getIm();
+    displayCombo("comboDisplay2",im);
     img1.cleanCombo();
-
-    if(exitBool){
-        return 0;
-        
-    }else{
-        return counter;
-    }
+    return count;
 }
